@@ -39,7 +39,7 @@ export class ChartComponent implements OnInit {
   @Input() title = '';
   @Input() yAxisTitle: string;
   @Input() xAxisType = 'lineair';
-  @Input() themeColor = '#7cb5ec';
+  @Input() themeColor = '#2853EB';
   @Input() height: string = null;
 
   private networkSubscription: Subscription;
