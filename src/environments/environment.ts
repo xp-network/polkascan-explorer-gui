@@ -26,16 +26,16 @@
 
 export const environment = {
   production: false,
-  jsonApiDiscoveryRootUrl: 'https://discovery-32.polkascan.io',
-  jsonApiRootUrl: null,
+  jsonApiDiscoveryRootUrl: null,
+  jsonApiRootUrl: "http://54.194.208.186:1000/api/v1",
   network: {
-    name: null,
-    networkId: null,
-    networkType: null,
-    chainType: null,
-    tokenSymbol: null,
-    tokenDecimals: null,
-    colorCode: null
+    name: "XP.Network",
+    networkId: "node-template",
+    networkType: "pre",
+    chainType: "para",
+    tokenSymbol: "XPNET",
+    tokenDecimals: 12,
+    colorCode: "777777"
   }
 };
 
