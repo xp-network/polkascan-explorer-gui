@@ -1465,3 +1465,167 @@ div#custome_table .card.dashboard-card {
 a.address-overview-format app-identicon, a app-identicon {
     display: none !important;
 }
+
+nav.navbar, .navbar.is-black {
+    background: #fff;
+}
+
+.custome_table header.card-header .card-header-icon {
+    padding: 0 0 0 0;
+}
+
+div#navMenu .navbar-start > a.navbar-item, div#navMenu a.navbar-link {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #040D27;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+
+div#navMenu a.navbar-link:after {
+    border: 0;
+    width: 8px;
+    height: 4px;
+    background: url("assets/icons/small-arrow.svg") no-repeat scroll center;
+    background-color: transparent;
+    display: block;
+    border: 0 !important;
+    background-size: contain;
+    transform: unset !important;
+    margin-left: 6px;
+}
+
+div#navMenu .navbar-start > a.navbar-item {
+    color: #2853EB;
+}
+
+div#navMenu a.navbar-link:hover {
+    background: #ECEDF3;
+    color: #040D27;
+}
+
+
+div#navMenu .navbar-dropdown a.navbar-item {
+    font-size: 15px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000cc;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+    transition: .1s;
+    font-weight: 400;
+    height: 32px !important;
+    min-height: unset;
+    padding-left: 12px;
+}
+
+div#navMenu .navbar-dropdown a.navbar-item:hover {
+    color: #000;
+    font-weight: 500 !important;
+}
+
+div#navMenu .navbar-dropdown {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(124, 127, 137, 0.2);
+    border-radius: 10px;
+    border: 0;
+    padding: 16px 0;
+    min-width: 160px;
+}
+
+.navbar>.container {
+    padding: 0 15px;
+}
+
+
+.details_table.info-tiles .card-header {
+    border-bottom: 1px solid $green(190 189 204 / 40%);
+    box-shadow: none;
+    margin-bottom: 16px;
+}
+
+.details_table .card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.details_table .card-header-title {
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.details_table .card-header-title img {
+    display: block;
+    margin-right: 8px;
+}
+
+.details_table .card-table tr {
+    background: #FFFFFF !important;
+    border-bottom: 1px solid $green(190 189 204 / 40%);
+}
+
+.details_table .card-table tr td {
+    height: 48px;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 126%;
+    color: #000;
+}
+
+.details_table .card-table .content {
+    padding: 0 24px;
+}
+
+.details_table .card-table tr:last-child {
+    border: 0;
+}
+
+.details_table .card-table tr td:first-child {
+    width: 41%;
+    font-size: 14px;
+    padding-left:0px;
+}
+
+.details_table.info-tiles .card-header {
+    border: 1px solid $green(190 189 204 / 40%);
+}
+
+.details_table.info-tiles .card-header .card-header-icon {
+    padding: 0 0 0 0;
+}
+
+.details_table.info-tiles .card-header .card-header-icon img {
+    display: block;
+    margin-right: 8px;
+}
+
+.details_table .card-header-title span {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2853EB;
+}
+
+@media only screen and (min-width: 1023px) {
+
+    div#navMenu .navbar-dropdown {
+        margin: 0 10px;
+    }
+
+}

@@ -20,15 +20,17 @@
       </div>
   </div>
   <div *ngIf="!block.is_loading && !resourceNotFound">
-    <section class="info-tiles">
+    <section class="details_table info-tiles">
       <div class="card events-card">
           <header class="card-header">
+            
               <p class="card-header-title">
-                  {{ 'Block-Detail.Block' | translate }} #{{ block.id }}
-              </p>
-            <a [routerLink]="" fragment="details" class="card-header-icon" aria-label="more options">
-             <span class="icon"><i class="fa fa-cube fa-2x"></i></span>
+                  <a [routerLink]="" fragment="details" class="card-header-icon" aria-label="more options">
+             <span class="icon"><img src="../../../assets/icons/last-block.svg"></span>
             </a>
+                  {{ 'Block-Detail.Block' | translate }} <span>#{{ block.id }}</span>
+              </p>
+            
           </header>
           <div class="card-table" id="details" *ngIf="block">
               <div class="content">
