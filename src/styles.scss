@@ -1548,7 +1548,7 @@ div#navMenu .navbar-dropdown {
 
 
 .details_table.info-tiles .card-header {
-    border-bottom: 1px solid $green(190 189 204 / 40%);
+    border-bottom: 1px solid #bebdcc66;
     box-shadow: none;
     margin-bottom: 16px;
 }
@@ -1603,9 +1603,7 @@ div#navMenu .navbar-dropdown {
     padding-left:0px;
 }
 
-.details_table.info-tiles .card-header {
-    border: 1px solid $green(190 189 204 / 40%);
-}
+
 
 .details_table.info-tiles .card-header .card-header-icon {
     padding: 0 0 0 0;
@@ -1620,6 +1618,66 @@ div#navMenu .navbar-dropdown {
     font-weight: 600;
     font-size: 15px;
     color: #2853EB;
+}
+
+
+.details_table 
+.tabs li.is-active a {
+    border-bottom: 2px solid #2853EB;
+    color: #2853EB;
+    font-weight: 600;
+}
+
+.details_table .tabs a {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 126%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+    padding: 16px 24px;
+}
+
+.details_table .tabs a span.icon {
+    font-size: 18px;
+}
+
+.details_table .tabs ul {
+    border-bottom: 1px solid $green(190 189 204 / 40%);
+    padding: 0 19px !important;
+}
+
+.ftdn .card-table .table tr th:first-child, 
+.ftdn .card-table .table tr td:first-child {
+    display: none;
+}
+
+.tab_table .card-table .table tr td, .tab_table .card-table .table tr th {
+    border: 0;
+    height: 40px;
+    vertical-align: middle;
+    padding-left: 0;
+}
+
+.tab_table .card-table .table tr th {
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;
+}
+
+.tab_table .card-table .table tr td {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 126%;
+    letter-spacing: 0.03em;
+}
+
+.custome_table header.card-header .card-header-icon i {
+    font-size: 18px;
+    color: #000;
+    margin-right: 8px;
+    display: block;
 }
 
 @media only screen and (min-width: 1023px) {

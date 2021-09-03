@@ -5,39 +5,81 @@
             <div class="card ">
                 <header class="card-header">
                     <ng-container [ngSwitch]="title">
+
                       <p class="card-header-title" *ngSwitchCase="'Validators'">
-                        {{ 'AccountList.Validators' | translate }}
-                      </p>
-                      <p class="card-header-title" *ngSwitchCase="'Nominators'">
-                        {{ 'AccountList.Nominators' | translate }}
-                      </p>
-                      <p class="card-header-title" *ngSwitchCase="'Council members'">
-                        {{ 'AccountList.Council members' | translate }}
-                      </p>
-                      <p class="card-header-title" *ngSwitchCase="'Technical committee members'">
-                        {{ 'AccountList.Technical committee members' | translate }}
-                      </p>
-                      <p class="card-header-title" *ngSwitchCase="'Treasury accounts'">
-                        {{ 'AccountList.Treasury accounts' | translate }}
-                      </p>
-                      <p class="card-header-title" *ngSwitchCase="'Sudo accounts'">
-                        {{ 'AccountList.Sudo accounts' | translate }}
-                      </p>
-                      <p class="card-header-title" *ngSwitchCase="'Accounts with identity'">
-                        {{ 'AccountList.Accounts with identity' | translate }}
-                      </p>
-                       <p class="card-header-title" *ngSwitchCase="'Accounts with negative judgement'">
-                        {{ 'AccountList.Accounts with negative judgement' | translate }}
-                      </p>
-                      <p class="card-header-title" *ngSwitchDefault>
-                          {{ 'AccountList.Accounts' | translate }}
-                      </p>
-                    </ng-container>
-                    <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
                       <span class="icon">
                         <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
                       </span>
                     </a>
+                        {{ 'AccountList.Validators' | translate }}
+                      </p>
+                      <p class="card-header-title" *ngSwitchCase="'Nominators'">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                        {{ 'AccountList.Nominators' | translate }}
+                      </p>
+                      <p class="card-header-title" *ngSwitchCase="'Council members'">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                        {{ 'AccountList.Council members' | translate }}
+                      </p>
+                      <p class="card-header-title" *ngSwitchCase="'Technical committee members'">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                        {{ 'AccountList.Technical committee members' | translate }}
+                      </p>
+                      <p class="card-header-title" *ngSwitchCase="'Treasury accounts'">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                        {{ 'AccountList.Treasury accounts' | translate }}
+                      </p>
+                      <p class="card-header-title" *ngSwitchCase="'Sudo accounts'">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                        {{ 'AccountList.Sudo accounts' | translate }}
+                      </p>
+                      <p class="card-header-title" *ngSwitchCase="'Accounts with identity'">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                        {{ 'AccountList.Accounts with identity' | translate }}
+                      </p>
+                       <p class="card-header-title" *ngSwitchCase="'Accounts with negative judgement'">
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                        {{ 'AccountList.Accounts with negative judgement' | translate }}
+                      </p>
+                      <p class="card-header-title" *ngSwitchDefault>
+                        <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="fa fa-id-card fa-2x" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                          {{ 'AccountList.Accounts' | translate }}
+                      </p>
+                    </ng-container>
+                    
                 </header>
                 <div class="card-table">
                     <div class="content">
