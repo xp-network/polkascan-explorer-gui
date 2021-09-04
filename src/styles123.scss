@@ -1034,7 +1034,7 @@ div#last-blocks .card.dashboard-card {
 
 .last-transfers .card-table,
 .last-blocks .card-table {
-    overflow: auto;
+    overflow: hidden auto;
     max-height: 279px !important;
 }
 
@@ -1833,9 +1833,6 @@ nav.navbar {
     margin-bottom: 26px !important;
 }
 
-
-
-
 @media only screen and (min-width: 1023px) {
 
     div#navMenu .navbar-dropdown {
@@ -1864,19 +1861,6 @@ nav.navbar {
     }
 
 }
-
-@media only screen and (max-width: 1088px) and (min-width: 769px){
-
-    div#last-transfers {
-        padding-left: 10px;
-    }
-
-    div#last-blocks {
-        padding-right: 10px;
-    }
-
-}
-
 
 nav.navbar.networks.is-black {
     display: none;
