@@ -799,7 +799,7 @@ section#search .card .card-content {
     box-shadow: none;
 }
 
-section#search input.input.is-large.ng-pristine.ng-valid{
+section#search input.input{
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -847,7 +847,7 @@ section#search span.icon.is-medium.is-left:before {
 section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered {
     margin: 0;
     background: #FFFFFF;
-    box-shadow: 0px 4px 17px $green(156, 156, 177, 0.15);
+    box-shadow: 0px 4px 17px #9c9cb126;
     border-radius: 16px;
     padding: 16px 18px;
 }
@@ -1066,6 +1066,7 @@ section.info-tiles.is-hidden-mobile {
 
 section.info-tiles {
     margin-top: 0;
+    padding:0 15px;
 }
 
 a.address-overview-format app-identicon {
@@ -1320,6 +1321,7 @@ path.highcharts-graph {
     background: #FFFFFF;
     box-shadow: 0px 4px 17px #9c9cb126;
     border-radius: 16px;
+    overflow: hidden;
 }
 .custome_table .content table td:first-child, .custome_table .content table th:first-child {
     display: none;
@@ -1831,6 +1833,11 @@ div#navMenu .navbar-dropdown {
     overflow: hidden;
 }
 
+.container section.info-tiles {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 nav.navbar {
     margin-bottom: 26px !important;
 }
@@ -1877,12 +1884,119 @@ nav.navbar {
         padding-right: 10px;
     }
 
+  div#last-blocks .card-table .table thead tr th, 
+  div#last-blocks .card-table .table tbody tr td {
+      padding: 13px 12px;
+  }
+
 }
+
+@media only screen and (max-width: 768px) {
+
+  .tabs.responsiveTab li {
+      width: 50%;
+  }
+
+  section.info-tiles.theBoxesContainer {
+      display: block !important;
+      margin-bottom: 0;
+  }
+
+  .theBoxesContainer .tile.is-ancestor.has-text-centered {
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      margin-right: -8px !important;
+      margin-left: -8px !important;
+  }
+
+  .theBoxesContainer .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile {
+      min-width: 33.3333% !important;
+      flex-shrink: 0;
+      padding: 0 8px !important;
+      margin-bottom: 16px;
+      width: 33.3333% !important;
+      max-width: 33.3333% !important;
+      min-height: 92px !important;
+  }
+
+  section.info-tiles.theBoxesContainer article.tile.is-child.box {
+      padding: 12px 15px 15px 10px !important;
+      min-height: 92px !important;
+      height:  auto !important;
+  }
+
+  section.info-tiles.theBoxesContainer article.tile.is-child.box .cardIcons img {
+      filter: invert(0) brightness(0);
+      height: 18px;
+  }
+
+  section.info-tiles.theBoxesContainer article.tile.is-child.box .cardIcons {
+      margin-bottom: 4px;
+      height: 18px;
+  }
+
+  section.info-tiles.theBoxesContainer article.tile.is-child.box p.subtitle {
+    font-size: 13px !important;
+  }
+
+}
+
+@media only screen and (max-width: 575px) {
+  div#last-blocks .card-table .table thead tr th, div#last-blocks .card-table .table tbody tr td {
+      padding: 13px 10px;
+  }
+
+  div#last-blocks .card-table .table thead tr th:last-child, div#last-blocks .card-table .table tbody tr td:last-child {
+      max-width: 80px !important;
+      min-width: 80px !important;
+  }
+
+  div#last-blocks .card-table .table thead tr th {
+      font-size: 11px;
+  }
+
+  div#last-blocks .card-table .table tbody tr td {
+      font-size: 14px !important;
+  }
+
+  section#search .card .card-content {
+      padding: 8px;
+  }
+
+  section#search input {
+      padding-left: 12px;
+      font-size: 14px;
+  }
+
+  section#search span.icon.is-medium.is-left {
+      background: #ECEDF3;
+      border-radius: 5px;
+  }
+
+  section#search .card .card-content input.input {
+      font-size: 14px;
+      padding-left: 12px;
+  }
+
+}
+/* @media only screen and (max-width: 575px) */
 
 @media only screen and (max-width: 480px) {
 
+  .theBoxesContainer .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile {
+      min-width: 50% !important;
+      width: 50% !important;
+      max-width: 50% !important;
+  }
+
   .details_table .tabs a {
-      padding: 16px 14px;
+    padding: 16px 14px;
+    padding: 11px 14px;
+    white-space: normal;
+    height: 55px;
   }
 
 }
