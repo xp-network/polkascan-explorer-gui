@@ -934,7 +934,12 @@ section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered .tile.i
 }
 
 .last-transfers header.card-header,
-.last-blocks header.card-header {border: 0px;box-shadow: none;border-bottom: 1px solid $green(190 189 204 / 40%);margin-right: -5px;}
+.last-blocks header.card-header {
+  border: 0px;
+  box-shadow: none;
+  border-bottom: 1px solid #bebdcc66;
+  margin-right: -5px;
+}
 
 .last-transfers header.card-header .card-header-title,
 .last-blocks header.card-header .card-header-title {
@@ -979,7 +984,7 @@ div#last-blocks .card.dashboard-card {
 /* or 15px */
     letter-spacing: 0.03em;
     color: #000000;
-    padding: 13px 25px;
+    padding: 13px 16px;
 }
 
 .last-transfers .card-table .table thead tr th:first-child, 
@@ -999,7 +1004,7 @@ div#last-blocks .card.dashboard-card {
 
 .last-transfers .card-table .table tbody tr td,
 .last-blocks .card-table .table tbody tr td {
-    padding: 10px 13px 10px 25px;
+    padding: 10px 13px 10px 16px;
     height: 40px;
     vertical-align: middle;
     font-size: 14px;
@@ -1029,7 +1034,7 @@ div#last-blocks .card.dashboard-card {
 .last-transfers .card-table .table thead tr th:last-child,
 .last-blocks .card-table .table tbody tr td:last-child,
 .last-blocks .card-table .table thead tr th:last-child {
-    padding-right: 25px;
+    padding-right: 12px;
 }
 
 .last-transfers .card-table,
@@ -1356,7 +1361,7 @@ path.highcharts-graph {
 
 div#custome_table .card.dashboard-card {
     background: #FFFFFF;
-    box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
+    box-shadow: 0px 4px 17px $green(156, 156, 177, 0.15);
     border-radius: 16px;
     overflow: hidden;
     padding-bottom: 15px;
@@ -1986,6 +1991,24 @@ nav.navbar {
 
 @media only screen and (max-width: 480px) {
 
+  .field.has-addons {
+      flex-wrap: wrap;
+  }
+
+  .transaction-filetr_top .control:last-child {
+      width: 100%;
+      padding: 0;
+      margin-top: 5px;
+  }
+
+  .transaction-filetr_top button.button {
+      width: 100%;
+  }
+
+  .transaction-filetr_top .select.is-fullwidth {
+      border: 0;
+  }
+
   .theBoxesContainer .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile {
       min-width: 50% !important;
       width: 50% !important;
@@ -1997,6 +2020,11 @@ nav.navbar {
     padding: 11px 14px;
     white-space: normal;
     height: 55px;
+  }
+
+  .blockResponsive.custome_table .card-table .table tbody tr td, 
+  .blockResponsive.custome_table .card-table .table thead tr th {
+      padding: 10px 8px 10px 22px;
   }
 
 }
