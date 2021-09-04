@@ -1846,7 +1846,9 @@ div#navMenu .navbar-dropdown {
 nav.navbar {
     margin-bottom: 26px !important;
 }
-
+section.info-tiles.is-hidden-mobile>.tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile>article.tile {
+    background: transparent;
+}
 
 
 
