@@ -1039,6 +1039,7 @@ div#last-blocks .card.dashboard-card {
 }
 
 /* width */
+.custome_table .card-table::-webkit-scrollbar,
 .last-transfers .card-table::-webkit-scrollbar,
 .last-blocks .card-table::-webkit-scrollbar {
   width: 4px;
@@ -1046,6 +1047,7 @@ div#last-blocks .card.dashboard-card {
 }
 
 /* Handle */
+.custome_table .card-table::-webkit-scrollbar-thumb,
 .last-transfers .card-table::-webkit-scrollbar-thumb,
 .last-blocks .card-table::-webkit-scrollbar-thumb {
     background: #BEBDCC;
