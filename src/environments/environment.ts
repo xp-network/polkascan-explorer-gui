@@ -27,7 +27,7 @@
 export const environment = {
   production: false,
   jsonApiDiscoveryRootUrl: null,
-  jsonApiRootUrl: "http://54.194.208.186:1000/api/v1",
+  jsonApiRootUrl: "http://34.241.55.10:1000/api/v1",
   network: {
     name: "XP.Network",
     networkId: "node-template",

@@ -1397,6 +1397,10 @@ div#custome_table .card.dashboard-card {
     background: transparent;
 }
 
+.custome_table .table.is-striped tbody tr:hover {
+    background: #F3F5F9 !important;
+}
+
 .custome_table .card-table .table tbody tr td:nth-child(2) a {
     color: #2853EB;
     font-size: 14px !important;
@@ -1509,7 +1513,6 @@ div#navMenu a.navbar-link:hover {
     color: #040D27;
 }
 
-
 div#navMenu .navbar-dropdown a.navbar-item {
     font-size: 15px;
     line-height: 32px;
@@ -1526,6 +1529,12 @@ div#navMenu .navbar-dropdown a.navbar-item {
     height: 32px !important;
     min-height: unset;
     padding-left: 12px;
+    transition: .2s;
+}
+
+div#navMenu .navbar-dropdown a.navbar-item:hover {
+    background: rgba(236, 237, 243, 0.5);
+    transition: .3s;
 }
 
 div#navMenu .navbar-dropdown a.navbar-item:hover {
@@ -1561,7 +1570,7 @@ div#navMenu .navbar-dropdown {
 }
 
 .details_table .card-header-title {
-    padding: 10px 20px;
+    padding: 14px 20px;
     font-weight: 600;
     font-size: 15px;
     line-height: 126%;
@@ -1569,11 +1578,6 @@ div#navMenu .navbar-dropdown {
     align-items: center;
     letter-spacing: 0.03em;
     color: #000000;
-}
-
-.details_table .card-header-title img {
-    display: block;
-    margin-right: 8px;
 }
 
 .details_table .card-table tr {
@@ -1598,21 +1602,32 @@ div#navMenu .navbar-dropdown {
 }
 
 .details_table .card-table tr td:first-child {
-    width: 41%;
+    width: 29%;
     font-size: 14px;
     padding-left:0px;
 }
 
+.details_table .card-header-title img,
+.details_table.info-tiles .card-header .card-header-icon img {
+    display: block;
+}
 
-
-.details_table.info-tiles .card-header .card-header-icon {
+.details_table.info-tiles .card-header .card-header-icon,
+.card-header-title.header_icon .card-header-icon {
+    display: inline-block;
+    width: auto !important;
+    max-width: unset;
+    height: auto !important;
+    max-height: unset;
+    margin-right: 8px;
     padding: 0 0 0 0;
 }
 
-.details_table.info-tiles .card-header .card-header-icon img {
-    display: block;
-    margin-right: 8px;
+.card-header-title.header_icon .card-header-icon i {
+    font-size: 21px;
+    color: #000;
 }
+
 
 .details_table .card-header-title span {
     font-weight: 600;
@@ -1680,10 +1695,166 @@ div#navMenu .navbar-dropdown {
     display: block;
 }
 
+.accountDetailTable.details_table .card-table tr td:first-child {
+    width: 25%;
+}
+
+.transaction-filetr_top {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 17px rgba(156, 156, 177, 0.15);
+    border-radius: 16px;
+    margin-bottom: 30px;
+    padding: 24px;
+}
+
+.transaction-filetr_top .filters {
+    margin: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #BEBDCC;
+    box-sizing: border-box;
+    border-radius: 9px;
+    overflow: hidden;
+    padding: 6px;
+    margin: 0 !important;
+}
+
+.transaction-filetr_top .card-header-icon {
+    padding: 0;
+}
+
+.transaction-filetr_top .field.has-addons .control.is-expanded {
+    margin: 0;
+    border: 0;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.transaction-filetr_top .select.is-fullwidth select {
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+    line-height: 126%;
+/* or 18px */
+    letter-spacing: 0.03em;
+    color: #000000;
+    padding: 10px 35px 10px 50px;
+    height: auto;
+    border-radius: 5px !important;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: #000;
+}
+
+.transaction-filetr_top .select.is-fullwidth {
+    height: auto;
+    border-right: 1px solid #BEBDCC;
+    position: relative;
+    padding-right: 6px;
+}
+
+.transaction-filetr_top span.icon.is-small.is-left {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+}
+
+.transaction-filetr_top .control:last-child {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.transaction-filetr_top button.button {
+    font-size: 15px;
+    line-height: 126%;
+/* or 19px */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+/* active */
+    color: #2853EB;
+    padding: 7px 18px;
+    height: auto;
+    border-radius: 8px !important;
+    transition: .2s;
+    background: #EFF3FF;
+    border: 0;
+}
+
+.transaction-filetr_top .select.is-fullwidth:hover select {
+    background: rgba(236, 237, 243, 0.5);
+    color: #2853EB;
+}
+
+.transaction-filetr_top .select.is-fullwidth select:focus:after {
+    border-color: #2853EB;
+}
+
+.transaction-filetr_top .select.is-fullwidth:hover select::after {
+    border-color: #2853EB;
+}
+
+.transaction-filetr_top .select.is-fullwidth:hover:after {
+    border-color: #2853EB !important;
+}
+
+.transaction-filetr_top .select.is-fullwidth:hover + span.icon.is-small.is-left {
+    color: #2853EB;
+}
+
+.transaction-filetr_top .control.is-expanded.has-icons-left:nth-child(2) {
+    padding-left: 6px;
+}
+
+.custome_table.transactionTableWidth .card-table .table tbody tr td:nth-child(3) {
+    max-width: 370px;
+}
+
+.custome_table.transactionTableWidth .card-table .table tbody tr td:nth-child(3)>a {
+    display: block;
+    overflow: hidden;
+}
+
+nav.navbar {
+    margin-bottom: 26px !important;
+}
+
 @media only screen and (min-width: 1023px) {
 
     div#navMenu .navbar-dropdown {
         margin: 0 10px;
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+}
+
+@media screen and (min-width: 1208px) {
+    .container {
+        max-width: 1152px;
+    }
+
+}
+
+@media screen and (min-width: 1408px) {
+    .container {
+        max-width: 1201px;
+    }
+
+}
+
+.container {
 }

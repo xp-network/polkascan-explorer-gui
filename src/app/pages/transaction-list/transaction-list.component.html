@@ -1,54 +1,54 @@
 <div class="columns">
     <div class="column is-12">
         <app-polkascan-header></app-polkascan-header>
-        <section class="custome_table">
+        
+        <div class="transaction-filetr_top">
+          <div class="card-header-icon">
+            <div class="filters" *ngIf="runtimeModules">
+              <div class="field has-addons">
+                <div class="control is-expanded has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select name="country" [(ngModel)]="filterModule" (ngModelChange)="selectModule($event)">
+                      <option [ngValue]="null">{{ 'transaction-list.All modules' | translate }}</option>
+                      <option *ngFor="let module of runtimeModules.data" [ngValue]="module?.attributes.module_id">{{module.attributes.name}}</option>
+                    </select>
+                  </div>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-cog"></i>
+                  </span>
+                </div>
+                <div class="control is-expanded has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select name="country" [(ngModel)]="filterCall" [disabled]="!runtimeCalls">
+                      <option [ngValue]="null">{{ 'transaction-list.All calls' | translate }}</option>
+                      <ng-container *ngIf="runtimeCalls">
+                      <option *ngFor="let call of runtimeCalls.data" [ngValue]="call.attributes.call_id">{{call.attributes.name}}</option>
+                      </ng-container>
+                    </select>
+                  </div>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-file-alt"></i>
+                  </span>
+                </div>
+                <div class="control">
+                  <button type="submit" class="button" (click)="applyFilters()">{{ 'transaction-list.Filter' | translate }}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="custome_table transactionTableWidth">
             <div class="card ">
-
                 <header class="card-header">
-                    <div class="card-header-title">
-                        <p>{{ 'transaction-list.Transactions' | translate }}</p>
-
-                    </div>
-
-                    <div class="card-header-icon">
-                      <div class="filters" *ngIf="runtimeModules">
-                        <div class="field has-addons">
-                          <div class="control is-expanded has-icons-left">
-                            <div class="select is-fullwidth">
-                              <select name="country" [(ngModel)]="filterModule" (ngModelChange)="selectModule($event)">
-                                <option [ngValue]="null">{{ 'transaction-list.All modules' | translate }}</option>
-                                <option *ngFor="let module of runtimeModules.data" [ngValue]="module?.attributes.module_id">{{module.attributes.name}}</option>
-                              </select>
-                            </div>
-                            <span class="icon is-small is-left">
-                              <i class="fas fa-cog"></i>
-                            </span>
-                          </div>
-                          <div class="control is-expanded has-icons-left">
-                            <div class="select is-fullwidth">
-                              <select name="country" [(ngModel)]="filterCall" [disabled]="!runtimeCalls">
-                                <option [ngValue]="null">{{ 'transaction-list.All calls' | translate }}</option>
-                                <ng-container *ngIf="runtimeCalls">
-                                <option *ngFor="let call of runtimeCalls.data" [ngValue]="call.attributes.call_id">{{call.attributes.name}}</option>
-                                </ng-container>
-                              </select>
-                            </div>
-                            <span class="icon is-small is-left">
-                              <i class="fas fa-file-alt"></i>
-                            </span>
-                          </div>
-                          <div class="control">
-                            <button type="submit" class="button" (click)="applyFilters()">{{ 'transaction-list.Filter' | translate }}</button>
-                          </div>
-                        </div>
-                      </div>
-                      <a [routerLink]="" fragment="list"  aria-label="more options">
-                        <span class="icon">
-                          <i class="fa fa-file-signature fa-2x" aria-hidden="true"></i>
-                        </span>
-                      </a>
-                    </div>
-
+                  <div class="card-header-title">
+                    <a [routerLink]="" fragment="list"  aria-label="more options">
+                      <span class="icon">
+                        <img _ngcontent-whs-c2="" src="../../../assets/icons/transactions-icon.svg">
+                      </span>
+                    </a>
+                    <p>{{ 'transaction-list.Transactions' | translate }}</p>
+                  </div>
                 </header>
                 <div class="card-table">
                     <div class="content">
