@@ -3,18 +3,18 @@
       <app-polkascan-header></app-polkascan-header>
 
       <div *ngIf="runtimeModule$ | async as runtimeModule">
-        <section class="info-tiles">
+        <section class="info-tiles details_table">
           <div class="card events-card">
-              <header class="card-header">
+                <header class="card-header">
                   <p class="card-header-title">
-                      {{ 'runtime-module-detail.Runtime module' | translate }} "{{ runtimeModule.attributes.name }}" {{ 'runtime-module-detail.for runtime' | translate }} # {{ runtimeModule.attributes.spec_version }}
-                  </p>
-                  <a [routerLink]="" fragment="details" class="card-header-icon" aria-label="more options">
+                    <a [routerLink]="" fragment="details" class="card-header-icon" aria-label="more options">
                       <span class="icon">
                         <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
                       </span>
                     </a>
-              </header>
+                      {{ 'runtime-module-detail.Runtime module' | translate }} "{{ runtimeModule.attributes.name }}" {{ 'runtime-module-detail.for runtime' | translate }} # {{ runtimeModule.attributes.spec_version }}
+                  </p>
+                </header>
               <div class="card-table" *ngIf="runtimeModule">
                   <div class="content">
                       <table class="table is-fullwidth is-striped">
@@ -33,17 +33,17 @@
               </div>
           </div>
         </section>
-        <section *ngIf="runtimeModule.relationships.calls.data.length > 0" id="call-functions">
+        <section *ngIf="runtimeModule.relationships.calls.data.length > 0" id="call-functions" class="details_table custome_table">
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
+                        <a [routerLink]="" fragment="call-functions" class="card-header-icon" aria-label="more options">
+                          <span class="icon">
+                            <i class="fa fa-file-alt fa-2x" aria-hidden="true"></i>
+                          </span>
+                        </a>
                         {{ 'runtime-module-detail.Call functions' | translate }}
                     </p>
-                    <a [routerLink]="" fragment="call-functions" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fa fa-file-alt fa-2x" aria-hidden="true"></i>
-                      </span>
-                    </a>
                 </header>
                 <div class="card-table">
                     <div class="content">
@@ -78,13 +78,13 @@
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
+                        <a [routerLink]="" fragment="events" class="card-header-icon" aria-label="more options">
+                          <span class="icon">
+                            <i class="fa fa-calendar-check fa-2x" aria-hidden="true"></i>
+                          </span>
+                        </a>
                         {{ 'runtime-module-detail.Events' | translate }}
                     </p>
-                    <a [routerLink]="" fragment="events" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fa fa-calendar-check fa-2x" aria-hidden="true"></i>
-                      </span>
-                    </a>
                 </header>
                 <div class="card-table">
                     <div class="content">
@@ -115,17 +115,17 @@
                 </div>
             </div>
         </section>
-        <section *ngIf="runtimeModule.relationships.storage.data.length > 0" id="storage-functions">
+        <section *ngIf="runtimeModule.relationships.storage.data.length > 0" id="storage-functions" class="details_table tab_table ftdn info-tiles">
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
+                        <a [routerLink]="" fragment="storage-functions" class="card-header-icon" aria-label="more options">
+                          <span class="icon">
+                            <i class="fa fa-database fa-2x" aria-hidden="true"></i>
+                          </span>
+                        </a>
                         {{ 'runtime-module-detail.Storage functions' | translate }}
                     </p>
-                    <a [routerLink]="" fragment="storage-functions" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fa fa-database fa-2x" aria-hidden="true"></i>
-                      </span>
-                    </a>
                 </header>
                 <div class="card-table">
                     <div class="content">
@@ -153,17 +153,17 @@
                 </div>
             </div>
         </section>
-        <section *ngIf="runtimeModule.relationships.constants.data.length > 0" id="constants">
+        <section *ngIf="runtimeModule.relationships.constants.data.length > 0" id="constants" class="details_table tab_table ftdn info-tiles">
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
+                        <a [routerLink]="" fragment="constants" class="card-header-icon" aria-label="more options">
+                          <span class="icon">
+                            <i class="fa fa-memory fa-2x" aria-hidden="true"></i>
+                          </span>
+                        </a>
                         {{ 'runtime-module-detail.Constants' | translate }}
                     </p>
-                    <a [routerLink]="" fragment="constants" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fa fa-memory fa-2x" aria-hidden="true"></i>
-                      </span>
-                    </a>
                 </header>
                 <div class="card-table">
                     <div class="content">
@@ -193,17 +193,17 @@
                 </div>
             </div>
         </section>
-        <section *ngIf="runtimeModule.relationships.errors.data.length > 0" id="errors">
+        <section *ngIf="runtimeModule.relationships.errors.data.length > 0" id="errors" class="details_table tab_table ftdn info-tiles">
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
+                        <a [routerLink]="" fragment="constants" class="card-header-icon" aria-label="more options">
+                          <span class="icon">
+                            <i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i>
+                          </span>
+                        </a>
                         {{ 'runtime-module-detail.Errors' | translate }}
                     </p>
-                    <a [routerLink]="" fragment="constants" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i>
-                      </span>
-                    </a>
                 </header>
                 <div class="card-table">
                     <div class="content">

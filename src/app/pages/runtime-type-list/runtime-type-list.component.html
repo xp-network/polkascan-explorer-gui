@@ -3,17 +3,17 @@
       <app-polkascan-header></app-polkascan-header>
 
       <div>
-        <section>
+        <section class="custome_table">
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
+                         <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
+                          <span class="icon">
+                            <i class="fa fa-stream fa-2x" aria-hidden="true"></i>
+                          </span>
+                        </a>
                         {{ 'runtime-type-list.Runtime Types' | translate }}
                     </p>
-                     <a [routerLink]="" fragment="list" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fa fa-stream fa-2x" aria-hidden="true"></i>
-                      </span>
-                    </a>
                 </header>
                 <div class="card-table">
                     <div class="content">

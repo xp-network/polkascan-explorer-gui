@@ -3,15 +3,15 @@
       <app-polkascan-header></app-polkascan-header>
 
       <div *ngIf="runtimeCall$ | async as runtimeCall">
-        <section class="info-tiles">
+        <section class="info-tiles custome_table">
           <div class="card events-card">
               <header class="card-header">
                   <p class="card-header-title">
-                      {{ 'runtime-call-detail.Call' | translate }} "{{ runtimeCall.attributes.name }}"
-                  </p>
                   <a  class="card-header-icon" aria-label="more options">
                  <span class="icon"><i class="fa fa-file-alt fa-2x"></i></span>
                 </a>
+                      {{ 'runtime-call-detail.Call' | translate }} "{{ runtimeCall.attributes.name }}"
+                  </p>
               </header>
               <div class="card-table" *ngIf="runtimeCall">
                   <div class="content">
@@ -43,17 +43,17 @@
               </div>
           </div>
         </section>
-        <section id="call-parameters">
+        <section id="call-parameters" class="custome_table">
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
-                        {{ 'runtime-call-detail.Parameters' | translate }}
-                    </p>
                     <a [routerLink]="" fragment="call-parameters" class="card-header-icon" aria-label="more options">
                       <span class="icon">
                         <i class="fa fa-stream fa-2x" aria-hidden="true"></i>
                       </span>
                     </a>
+                        {{ 'runtime-call-detail.Parameters' | translate }}
+                    </p>
                 </header>
                 <div class="card-table">
                     <div class="content">

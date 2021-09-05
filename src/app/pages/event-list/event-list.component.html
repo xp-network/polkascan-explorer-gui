@@ -1,51 +1,53 @@
 <div class="columns">
     <div class="column is-12">
         <app-polkascan-header></app-polkascan-header>
+        <div class="transaction-filetr_top">
+          <div class="card-header-icon">
+            <div class="filters" *ngIf="runtimeModules">
+              <div class="field has-addons">
+                <div class="control is-expanded has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select name="country" [(ngModel)]="filterModule" (ngModelChange)="selectModule($event)">
+                      <option [ngValue]="null">{{ 'Event-list.All modules' | translate }}</option>
+                      <option *ngFor="let module of runtimeModules.data" [ngValue]="module?.attributes.module_id">{{module.attributes.name}}</option>
+                    </select>
+                  </div>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-cog"></i>
+                  </span>
+                </div>
+                <div class="control is-expanded has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select name="country" [(ngModel)]="filterEvent" [disabled]="!runtimeEvents">
+                      <option [ngValue]="null">{{ 'Event-list.All events' | translate }}</option>
+                      <ng-container *ngIf="runtimeEvents">
+                      <option *ngFor="let event of runtimeEvents.data" [ngValue]="event.attributes.event_id">{{ event.attributes.name }}</option>
+                      </ng-container>
+                    </select>
+                  </div>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-file-alt"></i>
+                  </span>
+                </div>
+                <div class="control">
+                  <button type="submit" class="button" (click)="applyFilters()">{{ 'Event-list.Filter' | translate }}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="custome_table">
             <div class="card ">
                 <header class="card-header">
                     <div class="card-header-title">
-                        <p>{{ 'Event-list.Events' | translate }}</p>
-
-                    </div>
-
-                    <div class="card-header-icon">
-                      <div class="filters" *ngIf="runtimeModules">
-                        <div class="field has-addons">
-                          <div class="control is-expanded has-icons-left">
-                            <div class="select is-fullwidth">
-                              <select name="country" [(ngModel)]="filterModule" (ngModelChange)="selectModule($event)">
-                                <option [ngValue]="null">{{ 'Event-list.All modules' | translate }}</option>
-                                <option *ngFor="let module of runtimeModules.data" [ngValue]="module?.attributes.module_id">{{module.attributes.name}}</option>
-                              </select>
-                            </div>
-                            <span class="icon is-small is-left">
-                              <i class="fas fa-cog"></i>
-                            </span>
-                          </div>
-                          <div class="control is-expanded has-icons-left">
-                            <div class="select is-fullwidth">
-                              <select name="country" [(ngModel)]="filterEvent" [disabled]="!runtimeEvents">
-                                <option [ngValue]="null">{{ 'Event-list.All events' | translate }}</option>
-                                <ng-container *ngIf="runtimeEvents">
-                                <option *ngFor="let event of runtimeEvents.data" [ngValue]="event.attributes.event_id">{{ event.attributes.name }}</option>
-                                </ng-container>
-                              </select>
-                            </div>
-                            <span class="icon is-small is-left">
-                              <i class="fas fa-file-alt"></i>
-                            </span>
-                          </div>
-                          <div class="control">
-                            <button type="submit" class="button" (click)="applyFilters()">{{ 'Event-list.Filter' | translate }}</button>
-                          </div>
-                        </div>
-                      </div>
+                      
                       <a [routerLink]="" fragment="list"  aria-label="more options">
                         <span class="icon">
                           <i class="fa fa-calendar-check fa-2x" aria-hidden="true"></i>
                         </span>
                       </a>
+                      
+                      <p>{{ 'Event-list.Events' | translate }}</p>
                     </div>
                 </header>
                 <div class="card-table">

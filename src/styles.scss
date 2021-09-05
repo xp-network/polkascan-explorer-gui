@@ -783,7 +783,9 @@ nav.navbar.networks {
         }
     }
 }
-/** waseem css **/
+/* waseem css */
+
+/* Search css */
 section#search .card {
     background: #FFFFFF;
     box-shadow: 0px 4px 17px $green(156, 156, 177, 0.15);
@@ -842,7 +844,14 @@ section#search span.icon.is-medium.is-left:before {
     background: #BEBDCC;
     content: "";
 }
-/** second section **/
+
+span.icon.is-medium.is-right {right: auto;left: -15px;font-size: 11px;}
+
+span.icon.is-medium.is-right i {
+    font-size: 12px;
+}
+
+/* second section */
 
 section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered {
     margin: 0;
@@ -906,6 +915,10 @@ section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered .tile.i
     position: absolute;
     z-index: 1;
     transition: .3s ease all;
+}
+
+.cardIcons img.IconG {
+    filter: invert(0) brightness(0);
 }
 
 .cardIcons img.IconB {
@@ -1040,6 +1053,7 @@ div#last-blocks .card.dashboard-card {
 .last-transfers .card-table,
 .last-blocks .card-table {
     overflow: auto;
+    min-height: 279px !important;
     max-height: 279px !important;
 }
 
@@ -1219,6 +1233,9 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
     transition: .3s ease all;
 }
 
+.accountTable .card-table .table thead tr th:nth-child(2), .accountTable .card-table .table tbody tr td:nth-child(2) {
+    display: none;
+}
 
 /* ==========  Responsive css ==========  */
 
@@ -1324,7 +1341,7 @@ path.highcharts-graph {
 }
 
 
-/** block css yaseen **/
+/* block css yaseen */
 
 .custome_table .card {
     background: #FFFFFF;
@@ -1382,7 +1399,7 @@ div#custome_table .card.dashboard-card {
     color: #000000;
     padding: 12px 25px;
     height: 40px;
-    border-bottom: 1px solid #bebdcc66;
+    /*border-bottom: 1px solid #bebdcc66;*/
 }
 .custome_table .card-table .table thead tr th:first-child, 
 .custome_table .card-table .table tbody tr td:first-child {
@@ -1584,7 +1601,7 @@ div#navMenu .navbar-dropdown {
 }
 
 .details_table .card-header-title {
-    padding: 14px 20px;
+    padding: 14px 20px 14px 30px;
     font-weight: 600;
     font-size: 15px;
     line-height: 126%;
@@ -1596,7 +1613,6 @@ div#navMenu .navbar-dropdown {
 
 .details_table .card-table tr {
     background: #FFFFFF !important;
-    border-bottom: 1px solid $green(190 189 204 / 40%);
 }
 
 .details_table .card-table tr td {
@@ -1876,6 +1892,45 @@ a.npnet_link img {
     margin-right: 8px;
 }
 
+.card-header-title a i {
+    font-size: 24px;
+    color: #000;
+    display: block;
+    margin-right: 8px;
+}
+
+.address-info .name {
+    display: none;
+}
+
+.last-blocks .card-table .table thead tr th {
+    vertical-align: middle;
+}
+
+section#call-functions .content {
+    padding: 0;
+}
+
+.custome_table.ftdb .card-table .table thead tr th:first-child, 
+.custome_table.ftdb .card-table .table tbody tr td:first-child {
+    display: table-cell !important;
+}
+
+.details_table.conp0 .card-table .content, 
+.custome_table.conp0 .card-table .content {
+    padding: 0;
+}
+
+.custome_table tr.innerTable table.table.is-striped {
+    margin: -10px -25px;
+    width: 104% !important;
+}
+
+.logDetails.details_table .card-table tr td td:first-child {
+    padding-left: 6px;
+}
+
+/* Responsive Start */
 
 @media only screen and (min-width: 1023px) {
 
@@ -1994,6 +2049,7 @@ a.npnet_link img {
       font-size: 14px !important;
   }
 
+/* Search css */
   section#search .card .card-content {
       padding: 8px;
   }
@@ -2010,7 +2066,7 @@ a.npnet_link img {
 
   section#search .card .card-content input.input {
       font-size: 14px;
-      padding-left: 12px;
+      padding-left: 22px;
   }
 
 }
@@ -2058,4 +2114,12 @@ a.npnet_link img {
 
 nav.navbar.networks.is-black {
     display: none;
+}
+
+body {
+    background-image:url(assets/icons/background_gradiant.svg);
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    height: unset;
+    min-height: 100%;
 }

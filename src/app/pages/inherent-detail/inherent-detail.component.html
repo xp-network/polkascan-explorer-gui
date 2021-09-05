@@ -1,7 +1,7 @@
 <div class="columns">
   <div class="column is-12" *ngIf="extrinsic$ | async as extrinsic">
       <app-polkascan-header></app-polkascan-header>
-       <section class="info-tiles">
+       <section class="info-tiles custome_table ftdb">
         <app-extrinsic-table
           [extrinsic]="extrinsic"
           [networkTokenDecimals]="networkTokenDecimals"
@@ -10,17 +10,17 @@
           title="Inherent"
         ></app-extrinsic-table>
        </section>
-        <section id="events" *ngIf="extrinsic.relationships.events?.data.length > 0">
+        <section id="events" *ngIf="extrinsic.relationships.events?.data.length > 0" class="custome_table">
             <div class="card ">
                 <header class="card-header">
                     <p class="card-header-title">
+                        <a [routerLink]="" fragment="events" class="card-header-icon" aria-label="more options">
+                          <span class="icon">
+                            <i class="fa fa-calendar-check fa-2x" aria-hidden="true"></i>
+                          </span>
+                        </a>
                         {{ 'transaction-detail.Triggered Events' | translate }}
                     </p>
-                    <a [routerLink]="" fragment="events" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fa fa-calendar-check fa-2x" aria-hidden="true"></i>
-                      </span>
-                    </a>
                 </header>
                 <div class="card-table">
                     <div class="content">
