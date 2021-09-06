@@ -25,7 +25,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   jsonApiDiscoveryRootUrl: null,
   jsonApiRootUrl: "http://34.241.55.10:1000/api/v1",
   network: {

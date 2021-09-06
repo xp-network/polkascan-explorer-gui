@@ -26,6 +26,18 @@ import {AnalyticsChart} from '../../classes/analytics-chart.class';
 import {Observable, Subscription} from 'rxjs';
 import {AppConfigService} from '../../services/app-config.service';
 
+
+function normChart(an: AnalyticsChart): Array<Array<number>> {
+	const rawdat: Array<Array<number>> = an.attributes.data as any;
+
+	return rawdat.map((v, i) => {
+		const cp = [...v]
+		cp[1] -= i != 0 ? rawdat[i-1][1] : 0
+		return cp;
+	});
+}
+
+
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -41,6 +53,9 @@ export class ChartComponent implements OnInit {
   @Input() xAxisType = 'lineair';
   @Input() themeColor = '#2853EB';
   @Input() height: string = null;
+  @Input() postNormFunc: (data: Array<number>) => [number, number] = (data: Array<number>) => {
+	  return [data[0], data[1]]
+  }
 
   private networkSubscription: Subscription;
 
@@ -119,8 +134,12 @@ export class ChartComponent implements OnInit {
             // @ts-ignore
     this.chart = new Chart(options);
 
+	const extracted = normChart(chartData).map(this.postNormFunc);
             // tslint:disable-next-line:no-string-literal
-    this.chart.addSeries(chartData.attributes.data['series'][0], true, true);
+	this.chart.addSeries({
+		type: 'line',
+		data: extracted
+	}, true, true);
   }
 
   ngOnInit() {

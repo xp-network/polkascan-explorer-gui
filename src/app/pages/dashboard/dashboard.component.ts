@@ -36,6 +36,22 @@ import {environment} from '../../../environments/environment';
 import {AnalyticsChart} from '../../classes/analytics-chart.class';
 import {AnalyticsChartService} from '../../services/analytics-chart.service';
 
+
+type ChartData = {
+	type: string,
+	data: [number, number]
+}
+
+function normChart(an: AnalyticsChart): Array<Array<number>> {
+	const rawdat: Array<Array<number>> = an.attributes.data as any;
+
+	return rawdat.map((v, i) => {
+		const cp = [...v]
+		cp[1] -= i != 0 ? rawdat[i-1][1] : 0
+		return cp;
+	});
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -71,6 +87,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   }
 
+  public calcAverageBlockTime(data: Array<number>) {
+	  return [data[0], data[1]/data[2]];
+  }
+
   ngOnInit() {
     this.blockSearchText = '';
 
@@ -86,9 +106,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
         this.networkColor = '#' + network.attributes.color_code;
 
-        this.totalTransactionsDaychart$ = this.analyticsChartService.get('utcday-extrinsics_signed-sum-line-14');
-        this.cumulativeAccountsDayChart$ = this.analyticsChartService.get('utcday-accounts_new-sum-line-14');
-        this.averageBlocktimeDaychart$ = this.analyticsChartService.get('utcday-blocktime-avg-line-14');
+        this.totalTransactionsDaychart$ = this.analyticsChartService.get('extrinsic');
+        this.cumulativeAccountsDayChart$ = this.analyticsChartService.get('account');
+        this.averageBlocktimeDaychart$ = this.analyticsChartService.get('blocktime');
       }
     });
 
