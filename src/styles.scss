@@ -959,10 +959,10 @@ section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered .tile.i
     font-weight: 600;
     font-size: 15px;
     line-height: 126%;
-/* or 19px */
     letter-spacing: 0.03em;
     color: #000000;
     padding: 13px 12px 13px 25px;
+    text-transform: capitalize;
 }
 
 .last-transfers header.card-header .card-header-title img,
@@ -1017,7 +1017,7 @@ div#last-blocks .card.dashboard-card {
 
 .last-transfers .card-table .table tbody tr td,
 .last-blocks .card-table .table tbody tr td {
-    padding: 10px 13px 10px 16px;
+    padding: 10px 13px 10px 8px;
     height: 40px;
     vertical-align: middle;
     font-size: 14px;
@@ -1858,9 +1858,10 @@ div#navMenu .navbar-dropdown {
     max-width: 370px;
 }
 
+
 .custome_table.transactionTableWidth .card-table .table tbody tr td:nth-child(3)>a {
     display: block;
-    overflow: hidden;
+    word-break: break-all;
 }
 
 .container section.info-tiles {
@@ -1943,12 +1944,30 @@ section#call-functions .content {
     text-transform: capitalize;
 }
 
+.last-blocks .card-table .table thead tr th, 
+.last-blocks .card-table .table thead tr td {
+    padding: 13px 8px !important;
+}
+
+.last-blocks .card-table .table thead tr th:nth-child(2) {
+    padding-left: 25px !important;
+}
+
+div#last-blocks .card-table .table thead tr th:nth-child(2), 
+div#last-blocks .card-table .table tbody tr td:nth-child(2) {
+    width: auto;
+}
+
+div#transactions .table tr td:nth-child(5) {
+    width: 23%;
+}
+
 /* Responsive Start */
 
 @media only screen and (min-width: 1023px) {
 
     div#navMenu .navbar-dropdown {
-        margin: 0 10px;
+        margin: 0 10px 0 0px;
     }
 
 }
