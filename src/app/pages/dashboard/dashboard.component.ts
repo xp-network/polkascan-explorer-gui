@@ -101,16 +101,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.getBlocks();
       this.networkstats$ = this.networkstatsService.get('latest');
 
-      // Retrieve charts
-      if (environment.jsonApiDiscoveryRootUrl) {
 
-        this.networkColor = '#' + network.attributes.color_code;
+	this.networkColor = '#' + network.attributes.color_code;
 
-        this.totalTransactionsDaychart$ = this.analyticsChartService.get('extrinsic');
-        this.cumulativeAccountsDayChart$ = this.analyticsChartService.get('account');
-        this.averageBlocktimeDaychart$ = this.analyticsChartService.get('blocktime');
-      }
-    });
+	this.totalTransactionsDaychart$ = this.analyticsChartService.get('extrinsic');
+	this.cumulativeAccountsDayChart$ = this.analyticsChartService.get('account');
+	this.averageBlocktimeDaychart$ = this.analyticsChartService.get('blocktime');
+	});
 
     const blockUpdateCounter = interval(6000);
 

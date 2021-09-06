@@ -32,6 +32,7 @@ function normChart(an: AnalyticsChart): Array<Array<number>> {
 
 	return rawdat.map((v, i) => {
 		const cp = [...v]
+		cp[0] *= 1000;
 		cp[1] -= i != 0 ? rawdat[i-1][1] : 0
 		return cp;
 	});
