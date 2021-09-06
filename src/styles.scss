@@ -1200,6 +1200,10 @@ div#navMenu a.navbar-link:hover {
     background: unset;
 }
 
+div#navMenu .navbar-start > a.navbar-item:active {
+    background: #ECEDF3;
+}
+
 .navbar-dropdown {
     padding-left: 10px;
     padding-right: 10px;
@@ -1537,6 +1541,7 @@ div#navMenu a.navbar-link:after {
 
 div#navMenu .navbar-start > a.navbar-item {
     color: #2853EB;
+    background: transparent;
 }
 
 div#navMenu a.navbar-link:hover {
@@ -1928,6 +1933,14 @@ section#call-functions .content {
 
 .logDetails.details_table .card-table tr td td:first-child {
     padding-left: 6px;
+}
+
+.no-items {
+    padding-left: 23px;
+}
+
+.teCa .table tr td {
+    text-transform: capitalize;
 }
 
 /* Responsive Start */
