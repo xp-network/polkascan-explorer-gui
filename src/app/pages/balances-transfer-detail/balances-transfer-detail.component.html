@@ -1,15 +1,15 @@
 <div class="column is-12">
     <app-polkascan-header></app-polkascan-header>
     <div *ngIf="balanceTransfer$ | async as balanceTransfer">
-        <section class="info-tiles">
+        <section class="info-tiles  ftdb custome_table">
           <div class="card events-card">
               <header class="card-header">
                   <p class="card-header-title">
+                    <a  class="card-header-icon" aria-label="more options">
+                   <span class="icon"><i class="fa fa-exchange-alt fa-2x"></i></span>
+                  </a>
                       {{ 'BalanceTransfer.Balance transfer' | translate }} "{{ balanceTransfer.id }}"
                   </p>
-                  <a  class="card-header-icon" aria-label="more options">
-                 <span class="icon"><i class="fa fa-exchange-alt fa-2x"></i></span>
-                </a>
               </header>
               <div class="card-table" *ngIf="balanceTransfer.attributes">
                   <div class="content">
