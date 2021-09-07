@@ -1225,6 +1225,10 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
 
 @media only screen and (min-width: 1024px)  {
 
+    div#navMenu .navbar-item {
+        margin-left: 10px;
+    }
+
     div#navMenu .navbar-start {
         height: 36px;
         min-height: unset !important;
@@ -1846,10 +1850,31 @@ div#navMenu .navbar-dropdown {
 nav.navbar {
     margin-bottom: 26px !important;
 }
-section.info-tiles.is-hidden-mobile>.tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile>article.tile {
-    background: transparent;
+
+.details_table.info-tiles .card-header .card-header-icon i {
+    color: #000;
+    font-size: 24px;
 }
 
+a.npnet_link {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #040D27;
+    font-weight: 500;
+    font-size: 15px;
+    background: #ECEDF3;
+    border-radius: 8px;
+    padding: 7px 11px;
+    transition: .3s ease all;
+    margin-left: 4px;
+}
+
+a.npnet_link img {
+    display: block;
+    width: 22px;
+    margin-right: 8px;
+}
 
 
 @media only screen and (min-width: 1023px) {
@@ -1869,7 +1894,7 @@ section.info-tiles.is-hidden-mobile>.tile.is-ancestor.has-text-centered .tile.is
 
 @media screen and (min-width: 1208px) {
     .container {
-        max-width: 1152px;
+        max-width: 1200px;
     }
 
 }

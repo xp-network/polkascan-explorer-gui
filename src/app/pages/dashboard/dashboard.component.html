@@ -29,7 +29,7 @@
             </div>
         </section>
 
-        <section class="info-tiles is-hidden-mobile">
+        <section class="info-tiles is-hidden-mobile theBoxesContainer">
             <div class="tile is-ancestor has-text-centered">
                 <div class="tile is-parent is-2-mobile">
                     <article class="tile is-child box">
@@ -38,10 +38,10 @@
                         <!--<span class="icon">
                             <i class="fa fa-cube fa-2x"></i>
                         </span>-->
-						<div class="cardIcons">
-							<img class="IconG" src="../../../assets/icons/FinalizeBlock.svg" alt="">
-							<img class="IconB" src="../../../assets/icons/FinalizeBlock_1.svg" alt="">
-						</div>
+            						<div class="cardIcons">
+            							<img class="IconG" src="../../../assets/icons/FinalizeBlock.svg" alt="">
+            							<img class="IconB" src="../../../assets/icons/FinalizeBlock_1.svg" alt="">
+            						</div>
                         <p class="title" *ngIf="networkstats$ | async as networkstats">{{ networkstats.attributes.best_block| number: '1.'}}</p>
                         <p class="subtitle">{{ 'DashBoard.Finalized Block' | translate }}</p>
                           </div>
@@ -55,10 +55,10 @@
                           <!--<span class="icon">
                               <i class="fa fa-file-signature fa-2x"></i>
                           </span>-->
-						  <div class="cardIcons">
-							<img class="IconG" src="../../../assets/icons/Transactions.svg" alt="">
-							<img class="IconB" src="../../../assets/icons/Transactions_1.svg" alt="">
-						  </div>
+            						  <div class="cardIcons">
+            							<img class="IconG" src="../../../assets/icons/Transactions.svg" alt="">
+            							<img class="IconB" src="../../../assets/icons/Transactions_1.svg" alt="">
+            						  </div>
                           <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_signed_extrinsics | number: '1.'}}</p>
                           <p class="subtitle">{{ 'DashBoard.Transactions' | translate }}</p>
                         </div>
@@ -72,10 +72,10 @@
                           <!--<span class="icon">
                               <i class="fa fa-calendar-check fa-2x"></i>
                           </span>-->
-						  <div class="cardIcons">
-							<img class="IconG" src="../../../assets/icons/ModuleEvents.svg" alt="">
-							<img class="IconB" src="../../../assets/icons/ModuleEvents_1.svg" alt="">
-						  </div>
+            						  <div class="cardIcons">
+            							<img class="IconG" src="../../../assets/icons/ModuleEvents.svg" alt="">
+            							<img class="IconB" src="../../../assets/icons/ModuleEvents_1.svg" alt="">
+            						  </div>
                           <p class="title" *ngIf="networkstats$ | async as networkstats">{{ networkstats.attributes.total_events_module | number: '1.'}}</p>
                           <p class="subtitle">{{ 'DashBoard.Module Events' | translate }}</p>
                         </div>
@@ -89,10 +89,10 @@
                           <!--<span class="icon">
                               <i class="fa fa-id-card fa-2x"></i>
                           </span>-->
-						  <div class="cardIcons">
-							<img class="IconG" src="../../../assets/icons/Account.svg" alt="">
-							<img class="IconB" src="../../../assets/icons/Account_1.svg" alt="">
-						  </div>
+            						  <div class="cardIcons">
+            							<img class="IconG" src="../../../assets/icons/Account.svg" alt="">
+            							<img class="IconB" src="../../../assets/icons/Account_1.svg" alt="">
+            						  </div>
                           <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_accounts }}</p>
                           <p class="subtitle">{{ 'DashBoard.Active Accounts' | translate }}</p>
                         </div>
@@ -106,10 +106,10 @@
                           <!--<span class="icon">
                               <i class="fa fa-cogs fa-2x"></i>
                           </span>-->
-						  <div class="cardIcons">
-							<img class="IconG" src="../../../assets/icons/Runtime.svg" alt="">
-							<img class="IconB" src="../../../assets/icons/Runtime_1.svg" alt="">
-						  </div>
+            						  <div class="cardIcons">
+            							<img class="IconG" src="../../../assets/icons/Runtime.svg" alt="">
+            							<img class="IconB" src="../../../assets/icons/Runtime_1.svg" alt="">
+            						  </div>
                           <p *ngIf="networkstats$ | async as networkstats" class="title">{{ networkstats.attributes.total_runtimes }}</p>
                           <p class="subtitle">{{ 'DashBoard.Runtime Versions' | translate }}</p>
                         </div>
@@ -126,13 +126,13 @@
                     <header class="card-header">
                         <p class="card-header-title">
                             <img class="last_blo" src="../../../assets/icons/last-block.svg" alt="">
-							{{ 'DashBoard.Last blocks' | translate }}
-						</p>
+            							{{ 'DashBoard.Last blocks' | translate }}
+            						</p>
                         <a [routerLink]="" fragment="last-blocks" class="card-header-icon" aria-label="more options">
                           <!--<span class="icon">
                             <i class="fa fa-cube" aria-hidden="true"></i>
                           </span>-->
-						  <img class="last_blo_link" src="../../../assets/icons/last-link.svg" alt="">
+						              <img class="last_blo_link" src="../../../assets/icons/last-link.svg" alt="">
                         </a>
                     </header>
                   </a>
