@@ -387,9 +387,9 @@
 	"Global": {
 		"DisclaimerButton": "I Understand",
 		"DisclaimerTextAnd": "and",
-		"DisclaimerTextPre": "WEB3SCAN understands the importance of protecting and safeguarding your privacy. By continuing using this website you agree with our",
-		"DisclaimerTextPrivacyPolicy": "Privacy Policy",
-		"DisclaimerTextTermsOfUse": "Terms Of Use",
+		"DisclaimerTextPre": "",
+		"DisclaimerTextPrivacyPolicy": "",
+		"DisclaimerTextTermsOfUse": "",
 		"Network": "Network",
 		"View next": "View next"
 	},
