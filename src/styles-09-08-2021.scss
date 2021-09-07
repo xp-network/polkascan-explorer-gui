@@ -1698,11 +1698,12 @@ div#navMenu .navbar-dropdown {
     padding: 0 19px !important;
 }
 
-.ftdn .card-table .table th:first-child, .ftdn .card-table .table tr th:first-child, .ftdn .card-table .table tr td:first-child {
+.ftdn .card-table .table tr th:first-child, 
+.ftdn .card-table .table tr td:first-child {
     display: none;
 }
 
-.tab_table .card-table .table tr td, .tab_table .card-table .table th, .tab_table .card-table .table tr th {
+.tab_table .card-table .table tr td, .tab_table .card-table .table tr th {
     border: 0;
     height: 40px;
     vertical-align: middle;
@@ -1961,22 +1962,6 @@ div#transactions .table tr td:nth-child(5) {
     width: 23%;
 }
 
-.tab_table .no-items {
-    padding-left: 0;
-}
-
-div#transfers app-identicon {
-    display: none;
-}
-
-div#transfers table th:nth-child(4), div#transfers table td:nth-child(4) {
-    display: none;
-}
-
-section#events {
-    padding-bottom: 1px !important;
-}
-
 /* Responsive Start */
 
 @media only screen and (min-width: 1023px) {
@@ -2172,6 +2157,6 @@ body {
     background-size: cover;
 }
 
-.button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .textarea {
-    vertical-align: bottom !important;
+section.info-tiles.is-hidden-mobile>.tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile>article.tile {
+    background: transparent;
 }
