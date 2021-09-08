@@ -1077,6 +1077,7 @@ div#last-blocks .card.dashboard-card {
 .card-table table.table .button.is-small.is-primary {
     background: #2853EB;
     border-radius: 6px;
+    color:#fff !important;
 }
 
 section.info-tiles.is-hidden-mobile {
@@ -1625,7 +1626,7 @@ div#navMenu .navbar-dropdown {
     vertical-align: middle;
     font-size: 13px;
     line-height: 126%;
-    color: #000;
+    color: #010101;
 }
 
 .details_table .card-table .content {
@@ -2170,6 +2171,30 @@ body {
     height: unset;
     min-height: 100%;
     background-size: cover;
+}
+
+section.info-tiles.is-hidden-mobile>.tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile>article.tile {
+    background: unset !important;
+}
+
+section.info-tiles.is-hidden-mobile>.tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile>article.tile:hover {
+  background: #f3f5f9 !important;
+}
+
+.content table thead th:first-child {
+    padding-left: 0;
+    color: #010101 !important;
+}
+
+.custome_table .card-table tr td app-render-type a,
+.details_table .card-table tr td> a,
+.details_table .card-table tr td app-render-type a {
+    color: #2853EB;
+}
+
+.button.is-primary.is-hovered, 
+.button.is-primary:hover {
+  color: #fff;
 }
 
 .button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .textarea {
