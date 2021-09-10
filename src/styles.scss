@@ -1291,8 +1291,8 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
 .netwo-exp img {
     display: block;
     width: 100% !important;
-    // -webkit-filter: invert(1);
-    // filter: invert(1);
+    -webkit-filter: invert(1);
+    filter: invert(1);
 }
 
 .network-polkadot app-network-main nav.navbar> .container {
