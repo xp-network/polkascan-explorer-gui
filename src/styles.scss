@@ -1190,7 +1190,7 @@ div#navMenu .navbar-start {
 }
 
 div#navMenu {
-    padding: 25px 1px 8px 1px;
+    padding: 25px 10px 15px 1px;
 }
 
 div#navMenu a.navbar-item:hover {
@@ -1239,7 +1239,7 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
 }
 
 .accountTable .card-table .table thead tr th:nth-child(2), .accountTable .card-table .table tbody tr td:nth-child(2) {
-    display: none;
+    /* display: none; */
 }
 
 /* ==========  Responsive css ==========  */
@@ -1291,8 +1291,8 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
 .netwo-exp img {
     display: block;
     width: 100% !important;
-    width: 243px !important;
-    max-width: 243px !important;
+    -webkit-filter: invert(1);
+    filter: invert(1);
 }
 
 .network-polkadot app-network-main nav.navbar> .container {
@@ -2026,7 +2026,15 @@ section#events {
 
 }
 
+
+
 @media only screen and (max-width: 768px) {
+
+
+
+  .is-hidden-mobile {
+      display: table-cell !important;
+  }
 
   .tabs.responsiveTab li {
       width: 50%;
@@ -2201,4 +2209,37 @@ button.is-primary.is-hovered,
 }
 #privacy-notice {
     display: none;
+}
+
+.card-table {
+    overflow: auto !important;
+    padding-bottom: 10px !important;
+}
+
+.netwo-exp.new_logo {
+    width: auto !important;
+    display: flex !important;
+    align-items: center;
+    height: auto !important;
+    max-width: unset !important;
+    top: 27px;
+    left: 15px;
+}
+
+.netwo-exp.new_logo img {
+    display: block;
+    width: 170px !important;
+    height:  auto !important;
+    margin-right: 10px;
+}
+
+.netwo-exp.new_logo span {
+    display: block;
+    padding-left: 10px;
+    display: block;
+    border-left: 3px solid #000;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
 }

@@ -39,8 +39,8 @@
 @media screen and (max-width: 1088px) {
   .address-info .name, .address-info .index {
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
     max-width: 198px;
+    word-break: break-word;
   }
 }
