@@ -1303,7 +1303,7 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
 @media only screen and (max-width: 1023px) {
 
     .netwo-exp {
-        top: 9px;
+        top: 9px !important;
     }
 
 }
@@ -2242,4 +2242,25 @@ button.is-primary.is-hovered,
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
+}
+
+section.info-tiles.theBoxesContainer article.tile.is-child.box> a> div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.info-tiles.theBoxesContainer article.tile.is-child.box> a> div p.subtitle {
+    width: 100% !important;
+}
+
+section.info-tiles.theBoxesContainer article.tile.is-child.box .cardIcons {
+    width: 19px;
+    margin: 6px 8px 0 0;
+}
+
+section.info-tiles.theBoxesContainer article.tile.is-child.box> a:active, 
+section.info-tiles.theBoxesContainer article.tile.is-child.box> a:focus, 
+section.info-tiles.theBoxesContainer article.tile.is-child.box> a {
+    background: transparent !important;
+    outline: none !important;
 }
