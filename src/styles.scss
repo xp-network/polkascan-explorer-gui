@@ -2192,11 +2192,13 @@ section.info-tiles.is-hidden-mobile>.tile.is-ancestor.has-text-centered .tile.is
     color: #2853EB;
 }
 
-.button.is-primary.is-hovered, 
+button.is-primary.is-hovered, 
 .button.is-primary:hover {
   color: #fff;
 }
-
 .button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .textarea {
-    vertical-align: bottom !important;
+  vertical-align: bottom !important;
+}
+#privacy-notice {
+    display: none;
 }
