@@ -21,8 +21,8 @@
   <nav class="navbar networks is-black">
       <div class="container">
           <div class="navbar-brand">
-              <a class="navbar-item brand-text" routerLink="/" (click)="resetNetwork()">
-                <img src="assets/icons/network-exp.svg">
+              <a class="navbar-item brand-text" routerLink="xp.network" (click)="resetNetwork()">
+                <img src="assets/icons/logo.svg">
               </a>
               <div class="is-hidden-desktop network-name">
                 <i *ngIf="currentNetwork?.attributes.chain_type == 'para'" class="fa fa-project-diagram network-icon current-network"  [style.color]="'#' + currentNetwork?.attributes.color_code" title="Parachain"></i>

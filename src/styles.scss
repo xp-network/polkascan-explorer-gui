@@ -1101,8 +1101,8 @@ a.address-overview-format app-identicon {
 
 section.graph_box.info-tiles article.tile.is-child.box {
     background: #FFFFFF;
-    box-shadow: 0px 4px 17px $green(156, 156, 177, 0.15);
     border-radius: 16px;
+    box-shadow: 0px 4px 17px #9c9cb126;
 }
 
 section.graph_box.info-tiles .tile.is-ancestor.has-text-centered {
@@ -1117,9 +1117,8 @@ section.graph_box.info-tiles .tile.is-ancestor.has-text-centered .tile.is-parent
 
 text.highcharts-title {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 15px !important;
     line-height: 126%;
-/* or 19px */
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
@@ -1303,7 +1302,7 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
 @media only screen and (max-width: 1023px) {
 
     .netwo-exp {
-        top: 9px !important;
+        top: 9px;
     }
 
 }
@@ -2234,14 +2233,13 @@ button.is-primary.is-hovered,
 }
 
 .netwo-exp.new_logo span {
-    display: block;
     padding-left: 10px;
     display: block;
-    border-left: 3px solid #000;
+    border-left: 2px solid #040c25b3;
     color: #000;
     font-weight: bold;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 17px;
 }
 
 section.info-tiles.theBoxesContainer article.tile.is-child.box> a> div {
@@ -2263,4 +2261,11 @@ section.info-tiles.theBoxesContainer article.tile.is-child.box> a:focus,
 section.info-tiles.theBoxesContainer article.tile.is-child.box> a {
     background: transparent !important;
     outline: none !important;
+}
+
+section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile > article.tile> a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
