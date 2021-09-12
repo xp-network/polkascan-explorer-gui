@@ -2268,3 +2268,9 @@ section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.
     justify-content: center;
     height: 100%;
 }
+@media only screen and (max-width: 768px)  {
+    section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile > article.tile, 
+    section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile > article.tile:hover {
+        background: #fff !important;
+    }
+}
