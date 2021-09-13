@@ -40,7 +40,7 @@ ENV NETWORK_TOKEN_DECIMALS=$NETWORK_TOKEN_DECIMALS
 ARG NETWORK_COLOR_CODE=d32e79
 ENV NETWORK_COLOR_CODE=$NETWORK_COLOR_CODE
 
-RUN yarn ng build -- --configuration=${ENV_CONFIG} --output-path=dist
+RUN yarn ng build --configuration=${ENV_CONFIG} --output-path=dist
 
 
 ### STAGE 2: Setup ###
@@ -61,6 +61,6 @@ COPY ${NGINX_CONF} /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
 
 ## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
-COPY --from=builder /ng-app/dist/frontend /usr/share/nginx/html
+COPY --from=builder /ng-app/dist /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
