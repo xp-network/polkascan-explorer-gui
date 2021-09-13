@@ -46,6 +46,7 @@
     "ngx-timeago": "^1.0.4",
     "ngx-translate-messageformat-compiler": "^4.7.0",
     "ngx-webstorage-service": "^4.1.0",
+    "node-sass": "^4.14.1",
     "rxjs": "^6.5.5",
     "set-value": "^3.0.2",
     "tslib": "^1.13.0",
@@ -62,9 +63,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "^8.10.60",
-    "brotli-webpack-plugin": "^1.1.0",
     "codelyzer": "~4.5.0",
-    "compression-webpack-plugin": "^6.1.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.0",
@@ -73,12 +72,8 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "^5.4.4",
-    "sass": "^1.39.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  },
-  "resolutions": {
-    "node-sass": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.0.2.tgz"
   }
 }
