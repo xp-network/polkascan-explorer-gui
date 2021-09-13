@@ -22,6 +22,9 @@
  */
 
 const webpack = require('webpack');
+const CompressionPlugin = require(`compression-webpack-plugin`);
+const BrotliPlugin = require(`brotli-webpack-plugin`);
+const path = require(`path`);
 
 module.exports = {
   plugins: [
@@ -36,6 +39,19 @@ module.exports = {
         NETWORK_TOKEN_SYMBOL: JSON.stringify(process.env.NETWORK_TOKEN_SYMBOL),
         NETWORK_TOKEN_DECIMALS: JSON.stringify(process.env.NETWORK_TOKEN_DECIMALS),
         NETWORK_COLOR_CODE: JSON.stringify(process.env.NETWORK_COLOR_CODE)
+      }
+    }),
+    new BrotliPlugin({
+      asset: '[fileWithoutExt].[ext].br',
+      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/
+    }),
+    new CompressionPlugin({
+      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/,
+      filename(info){
+          let opFile= info.path.split('.'),
+          opFileType =  opFile.pop(),
+          opFileName = opFile.join('.');
+          return `${opFileName}.${opFileType}.gzip`;
       }
     })
   ]
