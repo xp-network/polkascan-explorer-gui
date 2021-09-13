@@ -2,11 +2,11 @@
 # We label our stage as ‘builder’
 FROM node:10-alpine as builder
 
-COPY ./package.json ./yarn.lock ./
+COPY ./package.json ./package-lock.json ./
 
 ## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
 
-RUN yarn install --frozen-lockfile && mkdir /ng-app && mv ./node_modules ./ng-app
+RUN npm ci && mkdir /ng-app && mv ./node_modules ./ng-app
 
 WORKDIR /ng-app
 
@@ -40,7 +40,7 @@ ENV NETWORK_TOKEN_DECIMALS=$NETWORK_TOKEN_DECIMALS
 ARG NETWORK_COLOR_CODE=d32e79
 ENV NETWORK_COLOR_CODE=$NETWORK_COLOR_CODE
 
-RUN yarn ng build --configuration=${ENV_CONFIG} --output-path=dist
+RUN npm run ng build -- --configuration=${ENV_CONFIG} --output-path=dist
 
 
 ### STAGE 2: Setup ###

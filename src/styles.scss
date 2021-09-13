@@ -873,7 +873,7 @@ section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered .tile.i
     text-align: left;
     background: $green(231 234 249 / 0%);
     border-radius: 16px;
-    transition: .3s ease all;
+    /*transition: .3s ease all;*/
 }
 
 section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered * {
@@ -913,7 +913,7 @@ section.info-tiles.is-hidden-mobile> .tile.is-ancestor.has-text-centered .tile.i
 .cardIcons img {
     position: absolute;
     z-index: 1;
-    transition: .3s ease all;
+    /*transition: .3s ease all;*/
 }
 
 .cardIcons img.IconG {
@@ -1150,7 +1150,7 @@ div#navMenu a.navbar-link {
     height: 36px !important;
     padding: 0 18px;
     background-color: unset;
-    transition: .3s ease all;
+    /*transition: .3s ease all;*/
 }
 
 div#navMenu .navbar-start> a.navbar-item {
@@ -1233,7 +1233,7 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
     height: 36px !important;
     padding: 0 18px;
     background-color: unset;
-    transition: .3s ease all;
+    /*transition: .3s ease all;*/
 }
 
 .accountTable .card-table .table thead tr th:nth-child(2), .accountTable .card-table .table tbody tr td:nth-child(2) {
@@ -1270,9 +1270,13 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
 
 @media only screen and (max-width: 1023px) {
 
-    div#navMenu .navbar-start> a.navbar-item {
-        padding-left: 18px;
-    }
+  div#navMenu .navbar-start> a.navbar-item {
+    padding-left: 18px;
+  }
+
+  .netwo-exp.new_logo {
+    top: 8px !important;
+  }
 
 }
 
@@ -1559,17 +1563,17 @@ div#navMenu .navbar-dropdown a.navbar-item {
     order: 1;
     flex-grow: 0;
     margin: 0px 0px;
-    transition: .1s;
+    /*transition: .1s;*/
     font-weight: 400;
     height: 32px !important;
     min-height: unset;
     padding-left: 12px;
-    transition: .2s;
+    /*transition: .2s;*/
 }
 
 div#navMenu .navbar-dropdown a.navbar-item:hover {
     background: rgba(236, 237, 243, 0.5);
-    transition: .3s;
+    /*transition: .3s;*/
 }
 
 div#navMenu .navbar-dropdown a.navbar-item:hover {
@@ -1584,8 +1588,11 @@ div#navMenu .navbar-dropdown {
     border: 0;
     padding: 16px 0;
     min-width: 160px;
+    display: none;
 }
-
+#navMenu .navbar-item.active  .navbar-dropdown {
+  display: block!important;
+}
 .navbar>.container {
     padding: 0 15px;
 }
@@ -1822,7 +1829,7 @@ div#navMenu .navbar-dropdown {
     padding: 7px 18px;
     height: auto;
     border-radius: 8px !important;
-    transition: .2s;
+    /*transition: .2s;*/
     background: #EFF3FF;
     border: 0;
 }
@@ -1886,7 +1893,7 @@ a.npnet_link {
     background: #ECEDF3;
     border-radius: 8px;
     padding: 7px 11px;
-    transition: .3s ease all;
+    /*transition: .3s ease all;*/
     margin-left: 4px;
 }
 
@@ -2274,3 +2281,105 @@ section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.
         background: #fff !important;
     }
 }
+
+
+@media only screen and (max-width: 1023px)  {
+
+
+  div#navMenu .navbar-dropdown {
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0px 0 13px 0;
+      margin-top: -5px;
+  }
+
+  div#navMenu {
+      padding: 25px 0px 15px 0px;
+      box-shadow: 0px 4px 24px #0712401a;
+      border-radius: 8px;
+      position: absolute;
+      left: 12px;
+      width: auto;
+      right: 12px;
+      z-index: 111;
+      top: 63px;
+      opacity: 0;
+      visibility: hidden;
+  }
+
+  div#navMenu .navbar-start > a.navbar-item, 
+  div#navMenu a.navbar-link,
+  a.npnet_link  {
+      display: inline-flex !important;
+      margin-left: 15px;
+      margin-bottom: 13px;
+  }
+
+  div#navMenu a.navbar-link, 
+  a.npnet_link,
+   div#navMenu .navbar-dropdown a.navbar-item {
+      color: #040D27;
+      font-weight: 500 !important;
+  }
+
+  div#navMenu .navbar-dropdown a.navbar-item {
+    padding-left: 50px;
+    line-height: 36px;
+    margin-top: 8px;
+  }
+
+  div#navMenu .navbar-dropdown a.navbar-item:hover {
+    background: #F7F8FA !important;
+  }
+
+  div#navMenu .navbar-dropdown a.navbar-item:first-child {
+    margin-top: 0;
+  }
+
+  div#navMenu.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-burger.burger {
+    border-radius: 8px;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    top: 6px;
+    background: #F7F8FA;
+  }
+
+  .navbar-burger.burger.is-active {
+    background: #2853EB;
+    color: #fff;
+  }
+
+  div#navMenu:after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+  }
+
+  div#navMenu:before {
+    position: absolute;
+    z-index: -2;
+    content: "";
+    left: -12px;
+    width: 100vw;
+    top: -10px;
+    height: 100vh;
+    border-radius: 0;
+    background: #29325299;
+  }
+
+
+}
+

@@ -27,6 +27,10 @@ import {AppConfigService} from '../../services/app-config.service';
 import {Subscription} from 'rxjs';
 import {environment} from '../../../environments/environment';
 import {Network} from '../../classes/network.class';
+import * as $ from "jquery";
+
+
+
 
 @Component({
   selector: 'app-network-main',
@@ -34,6 +38,8 @@ import {Network} from '../../classes/network.class';
   styleUrls: ['./network-main.component.scss']
 })
 export class NetworkMainComponent implements OnInit, OnDestroy {
+  
+ 
 
   private networkSubscription: Subscription;
 
@@ -58,12 +64,31 @@ export class NetworkMainComponent implements OnInit, OnDestroy {
 
   }
 
-  ngOnInit() {
+  ngOnInit() { 
+
+    $('#navMenu .navbar-item').click(function() {
+      
+     jQuery('#navMenu .navbar-item').removeClass('open');
+          if($(this).hasClass('active')) {
+          jQuery(this).removeClass('active');
+
+  } else {
+      jQuery('#navMenu .navbar-item').removeClass('active');
+      jQuery(this).addClass('active');       
+                    
+  }
+      //$(this).addClass('active').siblings().removeClass('active');
+
+      
+     
+
+  });
+   
 
     this.networkSubscription = this.appConfigService.getCurrentNetwork().subscribe( network => {
       this.networkName = network.attributes.name;
     });
-
+ 
     // Check if environment is multi- or single network
     if (environment.jsonApiDiscoveryRootUrl) {
 

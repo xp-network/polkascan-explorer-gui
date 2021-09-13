@@ -2,7 +2,25 @@
   <div class="columns">
       <div class="column is-12">
         <app-polkascan-header></app-polkascan-header>
-
+        <section class="is-12" id="search">
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <form (ngSubmit)="search()">
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input is-large" type="text" [(ngModel)]="blockSearchText" [ngModelOptions]="{standalone: true}" [placeholder]="'PlaceHolderSearch' | translate">
+                            <span class="icon is-medium is-left">
+                              <i class="fa fa-search"></i>
+                            </span>
+                            <span class="icon is-medium is-right">
+                              <i class="fa fa-check"></i>
+                            </span>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section>
          <div class="card">
               <header class="card-header">
