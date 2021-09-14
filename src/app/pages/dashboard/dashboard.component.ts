@@ -100,6 +100,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   public graph_open_sec(){
 	var first_graph_sec = document.getElementById("graph_3").getAttribute("data-id");
 	document.getElementById(first_graph_sec).style.display = 'block';
+	document.getElementById("graph_3").style.display = 'none';
   }	
   ngOnInit() {
 	
