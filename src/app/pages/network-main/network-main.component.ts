@@ -20,16 +20,13 @@
  * network-main.component.ts
  */
 
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {NetworkService} from '../../services/network.service';
-import {AppConfigService} from '../../services/app-config.service';
-import {Subscription} from 'rxjs';
-import {environment} from '../../../environments/environment';
-import {Network} from '../../classes/network.class';
-import * as $ from "jquery";
-
-
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { NetworkService } from '../../services/network.service';
+import { AppConfigService } from '../../services/app-config.service';
+import { Subscription } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { Network } from '../../classes/network.class';
 
 
 @Component({
@@ -38,8 +35,8 @@ import * as $ from "jquery";
   styleUrls: ['./network-main.component.scss']
 })
 export class NetworkMainComponent implements OnInit, OnDestroy {
-  
- 
+
+
 
   private networkSubscription: Subscription;
 
@@ -59,36 +56,35 @@ export class NetworkMainComponent implements OnInit, OnDestroy {
   ) {
 
     router.events.subscribe((val) => {
-        this.showNavigation = false;
+      this.showNavigation = false;
     });
 
   }
 
-  ngOnInit() { 
+  ngOnInit() {
 
-    $('#navMenu .navbar-item').click(function() {
-      
-     jQuery('#navMenu .navbar-item').removeClass('open');
-          if($(this).hasClass('active')) {
-          jQuery(this).removeClass('active');
+    const navMenu = document.getElementById('navMenu');
+    const navChild = navMenu.querySelector('.navbar-item');
+    const navChildren = navMenu.querySelectorAll('.navbar-item');
 
-  } else {
-      jQuery('#navMenu .navbar-item').removeClass('active');
-      jQuery(this).addClass('active');       
-                    
-  }
-      //$(this).addClass('active').siblings().removeClass('active');
 
-      
-     
+    navChildren.forEach(item => {
+      item.addEventListener('click', () => {
+        if(item.classList.contains("active")){
+          item.classList.remove('active');
+        }else{
+          navChildren.forEach(elt => {
+            elt.classList.remove('active');
+          });
+          item.classList.add('active');
+        }
+      })
+    });
 
-  });
-   
-
-    this.networkSubscription = this.appConfigService.getCurrentNetwork().subscribe( network => {
+    this.networkSubscription = this.appConfigService.getCurrentNetwork().subscribe(network => {
       this.networkName = network.attributes.name;
     });
- 
+
     // Check if environment is multi- or single network
     if (environment.jsonApiDiscoveryRootUrl) {
 
@@ -130,10 +126,10 @@ export class NetworkMainComponent implements OnInit, OnDestroy {
     }
 
     this.route.paramMap.subscribe(
-        (params: ParamMap) => {
-          if (params.get('network')) {
-            this.networkId = params.get('network');
-          }
+      (params: ParamMap) => {
+        if (params.get('network')) {
+          this.networkId = params.get('network');
+        }
       });
   }
 
