@@ -1240,6 +1240,11 @@ div#navMenu .navbar-item:hover> a, div#navMenu a.navbar-link:hover {
     /* display: none; */
 }
 
+span.icon.is-medium.is-right i.fa.fa-check,
+section#search span.icon.is-medium.is-left:before {
+    display: none;
+}
+
 /* ==========  Responsive css ==========  */
 
 
@@ -2314,11 +2319,39 @@ section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.
     justify-content: center;
     height: 100%;
 }
+
 @media only screen and (max-width: 768px)  {
+
     section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile > article.tile, 
     section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.is-parent.is-2-mobile > article.tile:hover {
         background: #fff !important;
     }
+
+    div#last-transfers .card-table .table tbody tr td:nth-child(4) {
+        max-width: 100px !important;
+        word-break: break-all;
+    }
+
+    div#last-transfers .card-table .table tbody tr td, div#last-transfers .card-table .table tbody tr td .address-info .index {
+        white-space: nowrap !important;
+        word-break: unset !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100px;
+    }
+
+    div#last-transfers .card-table .table tbody tr td {
+        max-width: 202px;
+    }
+
+    div#last-transfers .card-table .table tbody tr td:nth-child(2), div#last-transfers .card-table .table thead tr th:nth-child(2) {
+        padding-left: 10px;
+    }
+
+    .last-transfers header.card-header .card-header-title, .last-blocks header.card-header .card-header-title {
+        padding-left: 10px;
+    }
+
 }
 
 

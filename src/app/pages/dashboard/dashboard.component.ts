@@ -95,6 +95,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 		var first_graph = document.getElementById("graph_2").getAttribute("data-id");
 		document.getElementById(first_graph).style.display = 'block';
 		document.getElementById("graph_3").style.display = 'block';
+		document.getElementById("graph_2").style.display = 'none';
   }
   public graph_open_sec(){
 	var first_graph_sec = document.getElementById("graph_3").getAttribute("data-id");
