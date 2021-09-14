@@ -61,31 +61,22 @@ export class NetworkMainComponent implements OnInit, OnDestroy {
 
   }
 	public reload_fun(){
-		setTimout(function(){
+		setTimeout(function(){
 		location.reload();
-		},3000);
+		},6000);
 	}
   ngOnInit() {
 	
     const navMenu = document.getElementById('navMenu');
-    const navChild = navMenu.querySelector('.navbar-item');
     const navChildren = navMenu.querySelectorAll('.navbar-item');
-
-	
 
     navChildren.forEach(item => {
       item.addEventListener('click', () => {
         if(item.classList.contains("active")){
           item.classList.remove('active');
-		  //const ab = item.parentNode;
-		  //ab.classList.remove('active');
-		  //alert("afadf");
         }else{
           navChildren.forEach(elt => {
             elt.classList.remove('active');
-			//const ab = item.parentNode;
-		  //ab.classList.remove('active');
-		  //alert("afadf");
           });
           item.classList.add('active');
         }
