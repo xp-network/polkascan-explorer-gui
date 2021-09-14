@@ -109,7 +109,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.showSubmenus = false;
     setTimeout(() => { this.showSubmenus = true; }, 300);
   }
-
+   
   langsTitle(selectedLang: string) {
     switch (selectedLang) {
       case 'de':

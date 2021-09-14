@@ -1983,6 +1983,29 @@ section#events {
     padding-bottom: 1px !important;
 }
 
+.graph_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.graph_mobile_triger {
+    width: 33.3333%;
+}
+
+.graph_mobile_triger .tile.is-parent {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.graph_mobile_triger .tile.is-parent article.tile.is-child.box {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.graph_show_triger {
+    display: none;
+}
+
 /* Responsive Start */
 
 @media only screen and (min-width: 1023px) {
@@ -2024,18 +2047,33 @@ section#events {
         padding-right: 10px;
     }
 
-  div#last-blocks .card-table .table thead tr th, 
-  div#last-blocks .card-table .table tbody tr td {
-      padding: 13px 12px;
-  }
+    div#last-blocks .card-table .table thead tr th, 
+    div#last-blocks .card-table .table tbody tr td {
+        padding: 13px 12px;
+    }
 
 }
 
-
+@media only screen and (max-width: 991px){
+  .graph_mobile_triger {
+    width: 50%
+  }
+}
 
 @media only screen and (max-width: 768px) {
 
+  .graph_mobile_triger {
+    width: 100%
+  }
 
+  .graph_show_triger {
+    display: block;
+    font-size: 20px;
+  }
+
+  div#graph_box_2, div#graph_box_3 {
+      display: none;
+  }
 
   .is-hidden-mobile {
       display: table-cell !important;
@@ -2093,8 +2131,9 @@ section#events {
 }
 
 @media only screen and (max-width: 575px) {
-  div#last-blocks .card-table .table thead tr th, div#last-blocks .card-table .table tbody tr td {
-      padding: 13px 10px;
+  div#last-blocks .card-table .table thead tr th, 
+  div#last-blocks .card-table .table tbody tr td {
+      padding: 13px 10px !important;
   }
 
   div#last-blocks .card-table .table thead tr th:last-child, div#last-blocks .card-table .table tbody tr td:last-child {

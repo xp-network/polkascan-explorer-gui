@@ -52,6 +52,7 @@ function normChart(an: AnalyticsChart): Array<Array<number>> {
 	});
 }
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -90,11 +91,20 @@ export class DashboardComponent implements OnInit, OnDestroy {
   public calcAverageBlockTime(data: Array<number>) {
 	  return [data[0], data[1]/data[2]];
   }
-
+  public graph_open(){
+		var first_graph = document.getElementById("graph_2").getAttribute("data-id");
+		document.getElementById(first_graph).style.display = 'block';
+		document.getElementById("graph_3").style.display = 'block';
+  }
+  public graph_open_sec(){
+	var first_graph_sec = document.getElementById("graph_3").getAttribute("data-id");
+	document.getElementById(first_graph_sec).style.display = 'block';
+  }	
   ngOnInit() {
+	
     this.blockSearchText = '';
 
-    this.networkSubscription = this.appConfigService.getCurrentNetwork().subscribe( network => {
+		this.networkSubscription = this.appConfigService.getCurrentNetwork().subscribe( network => {
       this.networkURLPrefix = this.appConfigService.getUrlPrefix();
       this.networkTokenDecimals = +network.attributes.token_decimals;
       this.networkTokenSymbol = network.attributes.token_symbol;
