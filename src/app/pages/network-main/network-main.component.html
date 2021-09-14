@@ -19,7 +19,7 @@
                     <a class="navbar-item" routerLink="/{{ networkId }}/block">
                       {{ 'NavBar.item_Blocks' | translate }}
                     </a>
-                    <a class="navbar-item" routerLink="/{{ networkId }}/transaction">
+                    <a class="navbar-item" routerLink="/{{ networkId }}/transaction" (click)="reload_fun()">
                       {{ 'NavBar.item_Transactions' | translate }}
                     </a>
                     <a class="navbar-item" routerLink="/{{ networkId }}/inherent">
