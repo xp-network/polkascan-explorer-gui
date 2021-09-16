@@ -2457,3 +2457,6 @@ section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.
 .tab_table .tabs::-webkit-scrollbar {
     display: none;
 }
+.extrinsic_details .address-mobile-format {
+    word-break: break-all;
+}
