@@ -2460,3 +2460,6 @@ section.info-tiles.is-hidden-mobile > .tile.is-ancestor.has-text-centered .tile.
 .extrinsic_details .address-mobile-format {
     word-break: break-all;
 }
+a.remove_links{
+    pointer-events: none !important;
+}
